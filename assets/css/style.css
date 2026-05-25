@@ -76,6 +76,34 @@ main {
   padding: 56px 0 44px;
 }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: center;
+  gap: 64px;
+  padding: 72px 0 56px;
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image {
+  width: min(360px, 100%);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 0 24px 60px rgba(31, 57, 91, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
 .eyebrow {
   color: var(--accent);
   font-weight: 700;
@@ -218,4 +246,18 @@ footer {
   .section {
     padding: 22px;
   }
+
+  .hero-grid {
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding: 48px 0 36px;
+}
+
+.hero-image-wrapper {
+  order: -1;
+}
+
+.hero-image {
+  width: min(280px, 100%);
+}
 }
