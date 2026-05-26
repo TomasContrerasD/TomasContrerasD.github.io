@@ -24,6 +24,7 @@
   </header>
 
   <div class="hero-outer">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
     <div class="hero-inner">
       <section class="hero">
         <p class="eyebrow">Football Analytics</p>
@@ -71,6 +72,39 @@
     </div>
 
   </div>
+
+  <script>
+  (function () {
+    const canvas = document.getElementById('hero-canvas');
+    const ctx    = canvas.getContext('2d');
+    const heroOuter = document.querySelector('.hero-outer');
+    const mouse = { x: -9999, y: -9999 };
+    function resize() { canvas.width = heroOuter.offsetWidth; canvas.height = heroOuter.offsetHeight; }
+    resize();
+    window.addEventListener('resize', resize);
+    window.addEventListener('mousemove', function (e) { const r = canvas.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
+    document.addEventListener('mouseleave', function () { mouse.x = -9999; mouse.y = -9999; });
+    function rand(min, max) { return Math.random() * (max - min) + min; }
+    function Node() { this.x = rand(0, canvas.width); this.y = rand(0, canvas.height); this.vx = rand(-0.38, 0.38); this.vy = rand(-0.38, 0.38); this.r = rand(2.5, 5.5); this.alpha = rand(0.30, 0.70); }
+    Node.prototype.update = function () {
+      this.x += this.vx; this.y += this.vy;
+      if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+      if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+      var dx = this.x - mouse.x, dy = this.y - mouse.y, dist = Math.sqrt(dx*dx+dy*dy), R = 130;
+      if (dist < R && dist > 0.5) { var s = ((R-dist)/R)*5; this.x += (dx/dist)*s; this.y += (dy/dist)*s; }
+    };
+    Node.prototype.draw = function () { ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI*2); ctx.fillStyle = 'rgba(0,80,157,'+this.alpha+')'; ctx.fill(); };
+    var LINK_DIST = 155, nodes = Array.from({length:55}, function(){return new Node();});
+    function drawLinks() {
+      for (var i=0;i<nodes.length;i++) for (var j=i+1;j<nodes.length;j++) {
+        var dx=nodes[i].x-nodes[j].x, dy=nodes[i].y-nodes[j].y, d=Math.sqrt(dx*dx+dy*dy);
+        if (d<LINK_DIST) { ctx.strokeStyle='rgba(0,80,157,'+((1-d/LINK_DIST)*0.28)+')'; ctx.lineWidth=0.9; ctx.beginPath(); ctx.moveTo(nodes[i].x,nodes[i].y); ctx.lineTo(nodes[j].x,nodes[j].y); ctx.stroke(); }
+      }
+    }
+    function loop() { ctx.clearRect(0,0,canvas.width,canvas.height); drawLinks(); nodes.forEach(function(n){n.update();n.draw();}); requestAnimationFrame(loop); }
+    loop();
+  })();
+  </script>
 
   <div class="footer-band">
     <footer>
