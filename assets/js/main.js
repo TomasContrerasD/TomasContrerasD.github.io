@@ -6,8 +6,8 @@ if (year) year.textContent = new Date().getFullYear();
   if (!('IntersectionObserver' in window) || motionPreference.matches) return;
 
   const elements = [
-    ...document.querySelectorAll('.hero-copy, .hero-visual, .method-trace'),
-    ...document.querySelectorAll('.story-part > h2, .story-part > p, .story-part > ul, .story-method > li, .contact-actions')
+    ...document.querySelectorAll('.hero-copy, .hero-visual, .method-trace, .today-photo'),
+    ...document.querySelectorAll('.story-part > h2, .story-part > p, .story-part > ul, .today-copy > h2, .today-copy > p, .story-method > li, .contact-actions')
   ];
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
