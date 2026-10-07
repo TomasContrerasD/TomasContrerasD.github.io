@@ -1,323 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tomás Contreras | Data Scientist</title>
-  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#163d50">
+  <meta name="description" content="Soy Tomás Contreras. Conecto datos, tecnología e IA con los problemas de las empresas para que su forma de trabajar acompañe lo que quieren construir.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:title" content="Tomás Contreras | Datos, tecnología y una forma de crecer">
+  <meta property="og:description" content="Mi historia, lo que aprendí construyendo con datos y cómo puedo ayudarte a ampliar la capacidad de tu empresa.">
+  <meta property="og:image" content="https://tomascontrerasd.github.io/assets/img/1.jpg">
+  <title>Tomás Contreras | Datos, tecnología y una forma de crecer</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/monogram.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/hero-network.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+  </svg>
   <header class="site-header">
-    <nav>
+    <nav class="container navigation" aria-label="Navegación principal">
+      <a class="brand" href="#inicio">Tomás Contreras Delporte<span class="brand-dot" aria-hidden="true"></span></a>
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="projects/index.html">Projects</a>
-        <a href="files/TOMÁS_CONTRERAS_CV_EN.pdf"><img src="assets/img/united_kingdom.png" alt="UK flag" class="flag-icon"> CV EN</a>
-        <a href="files/TOMÁS_CONTRERAS_CV_ES.pdf"><img src="assets/img/chile.png" alt="Chile flag" class="flag-icon"> CV ES</a>
+        <a href="#mi-historia">Mi historia</a>
+        <a href="#como-puedo-ayudar">Cómo puedo ayudar</a>
+        <a class="nav-contact" href="#contacto">Contacto <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
       </div>
     </nav>
   </header>
-
-  <div class="hero-outer">
-    <canvas id="hero-canvas" aria-hidden="true"></canvas>
-    <div class="hero-inner">
-      <section class="hero hero-grid">
-        <div class="hero-content">
-        <p class="eyebrow">Data Scientist | Data Engineering</p>
-        <h1>Hi, I'm Tomás Contreras</h1>
-        <p class="hero-text">
-          Welcome to my personal website. This space brings together my professional background, experience, and the
-          projects I’m developing as a Data Scientist. In Home, you can find who I am and what I do; in Projects, I
-          share my work in Data Science, AI, automation, and football analytics.
-        </p>
-        <p class="hero-text">
-          Let's connect.
-        </p>
-        
-        <div class="social-links">
-          <a href="mailto:tomascontrerasipd@gmail.com">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            Email
-          </a>
-          <a href="https://www.linkedin.com/in/tomas-contreras-delporte/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            LinkedIn
-          </a>
-          <a href="https://github.com/TomasContrerasD" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-            GitHub
-          </a>
+  <main id="contenido">
+    <section class="hero-section" id="inicio" aria-labelledby="hero-title">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero container">
+      <div class="hero-copy">
+        <h1 id="hero-title">Hola,<br>soy <em>Tomás.</em></h1>
+        <p class="hero-lead">Msc en Data Science y actualmente trabajo como Data Analyst en <strong>BHP</strong>.</p>
+        <p>Además de estar aprendiendo y construyendo proyectos con datos, me considero bastante deportista y suelo escuchar harta música.</p>
+        <p>Actualmente estoy construyendo mi carrera alrededor de los datos, la tecnología y la IA, buscando entender <strong>cómo pueden ampliar la capacidad de las empresas y las personas para crear valor.</strong></p>
+      </div>
+      <div class="hero-visual">
+        <div class="portrait-frame">
+          <img class="portrait" src="assets/img/1.jpg" alt="Tomás Contreras" width="3395" height="5092" fetchpriority="high" decoding="async">
         </div>
       </div>
-
-        <div class="hero-image-wrapper">
-          <img src="assets/img/1.jpg" alt="Tomás Contreras portrait" class="hero-image">
-        </div>
-      </section>
-    </div>
-  </div>
-
-  <div class="band"></div>
-
-  <div class="sections-wrapper">
-
-    <div class="section-block">
-      <h2 class="section-title">About Me</h2>
-      <div class="section">
-        <p>
-          I’m a Data Scientist with an MSc in Data Science and professional experience building automated data pipelines, 
-          reporting systems, AI-assisted workflows, and internal analytics tools. My work combines Python, statistics, 
-          machine learning, data visualization, and data engineering to turn complex information into actionable
-          insights.
-
-        </p>
-        <p>
-          I have built my professional path by taking ownership of complex problems and transforming them into, 
-          scalable, impact-oriented data products. I’m especially interested in projects where technical development can 
-          directly improve how teams work, analyze information, and make decisions.
-        </p>
-        <p>
-          I’m currently focused on applying data science to sports and football analytics, with the goal of expanding the
-           impact of new technologies and analytical modeling in the sports industry and strengthening data-driven decision-making.
-        </p>
       </div>
-    </div>
-
-    <div class="section-block">
-      <h2 class="section-title">Experience</h2>
-      <div class="section">
-
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <h3>Plusmining</h3>
-            <span>Santiago, Chile</span>
-          </div>
-
-          <div class="exp-role">
-            <div class="exp-role-header">
-              <span class="exp-role-title">Data Scientist</span>
-              <span class="exp-role-date">Feb 2026 — Present</span>
-            </div>
-            <ul>
-              <li>Lead the development of internal data products, collaborating with senior analysts to translate business intelligence needs into analytical tools used by non-technical users.</li>
-              <li>Design and maintain automated data pipelines that integrate heterogeneous sources, reducing manual work by more than 22 hours per month and increasing analytical coverage by 20\%.</li>
-              <li>Architect and deploy a production-grade full-stack platform to centralize internal tools, using FastAPI, Next.js/React, OAuth 2.0, and cloud services.</li>
-              <li>Build and deploy production LLM agents to support report drafting and review workflows.</li>
-              <li>Prepare and present market intelligence reports, combining operational, financial, and strategic analysis.</li>
-            </ul>
-          </div>
-
-          <div class="exp-role">
-            <div class="exp-role-header">
-              <span class="exp-role-title">Data &amp; Market Analyst</span>
-              <span class="exp-role-date">Aug 2025 — Feb 2026</span>
-            </div>
-            <ul>
-              <li>Engineer automated data workflows to ingest, process, and structure unstructured market data from multiple external sources.</li>
-              <li>Produce monthly and semi-annual market intelligence reports assessing production, financial performance, trends, and strategic developments.</li>
-            </ul>
-          </div>
-
-          <div class="exp-role">
-            <div class="exp-role-header">
-              <span class="exp-role-title">Market Analyst</span>
-              <span class="exp-role-date">Jan 2025 — Aug 2025</span>
-            </div>
-            <ul>
-              <li>Automate data collection workflows and analyze operational and financial data across national and international mining companies.</li>
-            </ul>
-          </div>
-
-          <div class="exp-role">
-            <div class="exp-role-header">
-              <span class="exp-role-title">Junior Analyst Intern</span>
-              <span class="exp-role-date">Sep 2024 — Dec 2024</span>
-            </div>
-            <ul>
-              <li>Collect, consolidate, and analyze operational data to support client-facing reports, presentations, industry benchmarks, and internal research outputs.</li>
-            </ul>
-          </div>
+    </section>
+    <section class="big-idea" aria-labelledby="idea-title">
+      <div class="container idea-layout">
+        <div>
+          <p class="eyebrow">Una idea que me mueve</p>
+          <h2 id="idea-title">Lo que construiste durante años <em>no debería quedarse atrás.</em></h2>
         </div>
-
-      </div>
-    </div>
-
-    <div class="section-block">
-      <h2 class="section-title">Education</h2>
-      <div class="section">
-
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <h3>Adolfo Ibáñez University</h3>
-            <span>Santiago, Chile</span>
-          </div>
-          <div class="exp-role">
-            <div class="exp-role-header">
-              <span class="exp-role-title">Master of Science in Data Science</span>
-              <span class="exp-role-date">Jul 2023 — Jan 2025</span>
-            </div>
-            <p style="margin: 6px 0 4px; font-size: 0.9rem;">
-              Thesis:
-              <a href="https://github.com/TomasContrerasD/estimation-metals-concentrations/tree/main" target="_blank">
-                Estimation of heavy metal concentrations in tailings dams using multispectral satellite imagery.
-              </a>
-            </p>
-            <ul>
-              <li>Developed supervised machine learning models to estimate metal content in tailings deposits in Chile.</li>
-              <li>Tested and compared regression models, improving predictive performance by approximately 10%.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <h3>Adolfo Ibáñez University</h3>
-            <span>Santiago, Chile</span>
-          </div>
-          <div class="exp-role">
-            <div class="exp-role-header">
-              <span class="exp-role-title">Industrial Civil Engineering, Business Analytics</span>
-              <span class="exp-role-date">Mar 2019 — Dec 2023</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="section-block">
-      <h2 class="section-title">Skills</h2>
-      <div class="section">
-        <div class="skills-grid">
-          <div>
-            <h3>Programming</h3>
-            <p>Python, SQL, R, TypeScript, Git</p>
-          </div>
-          <div>
-            <h3>ML &amp; Data Science</h3>
-            <p>pandas, NumPy, scikit-learn, TensorFlow, PyTorch, XGBoost, statistical modeling</p>
-          </div>
-          <div>
-            <h3>AI &amp; LLM Engineering</h3>
-            <p>LangChain, LangGraph, prompt engineering, AI agent workflows</p>
-          </div>
-          <div>
-            <h3>Full-Stack &amp; Cloud</h3>
-            <p>FastAPI, Next.js, React, Google Cloud Platform, BigQuery, PostgreSQL</p>
-          </div>
-          <div>
-            <h3>Data Pipelines</h3>
-            <p>ETL pipelines, web scraping, APIs, Scrapy, BeautifulSoup, Playwright</p>
-          </div>
-          <div>
-            <h3>Visualization</h3>
-            <p>Power BI, Looker Studio, Tableau, Plotly, matplotlib</p>
-          </div>
+        <div class="idea-copy">
+          <p>Las empresas acumulan clientes, profesionales, conocimiento e información durante años.</p>
+          <p>Pero mientras crecen, también aparecen procesos manuales, información dispersa y formas de trabajar que alguna vez funcionaron, pero que poco a poco comienzan a limitar lo que el equipo puede hacer.</p>
+          <p>Hoy, con los datos, la automatización y la IA cambiando tan rápido las reglas del juego, hay una pregunta que vale la pena hacerse:</p>
+          <p class="idea-question">¿Está evolucionando tu empresa al mismo ritmo que el mundo que la rodea?</p>
         </div>
       </div>
-    </div>
-
-  </div>
-
-  <script>
-  (function () {
-    const canvas = document.getElementById('hero-canvas');
-    const ctx    = canvas.getContext('2d');
-    const heroOuter = document.querySelector('.hero-outer');
-
-    const mouse = { x: -9999, y: -9999 };
-
-    function resize() {
-      canvas.width  = heroOuter.offsetWidth;
-      canvas.height = heroOuter.offsetHeight;
-    }
-    resize();
-    window.addEventListener('resize', resize);
-
-    window.addEventListener('mousemove', function (e) {
-      const r = canvas.getBoundingClientRect();
-      mouse.x = e.clientX - r.left;
-      mouse.y = e.clientY - r.top;
-    });
-    document.addEventListener('mouseleave', function () {
-      mouse.x = -9999;
-      mouse.y = -9999;
-    });
-
-    function rand(min, max) { return Math.random() * (max - min) + min; }
-
-    function Node() {
-      this.x     = rand(0, canvas.width);
-      this.y     = rand(0, canvas.height);
-      this.vx    = rand(-0.38, 0.38);
-      this.vy    = rand(-0.38, 0.38);
-      this.r     = rand(2.5, 5.5);
-      this.alpha = rand(0.30, 0.70);
-    }
-
-    Node.prototype.update = function () {
-      this.x += this.vx;
-      this.y += this.vy;
-
-      if (this.x < 0 || this.x > canvas.width)  this.vx *= -1;
-      if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-
-      const dx   = this.x - mouse.x;
-      const dy   = this.y - mouse.y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      const R    = 130;
-
-      if (dist < R && dist > 0.5) {
-        const strength = ((R - dist) / R) * 5;
-        this.x += (dx / dist) * strength;
-        this.y += (dy / dist) * strength;
-      }
-    };
-
-    Node.prototype.draw = function () {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(0,80,157,' + this.alpha + ')';
-      ctx.fill();
-    };
-
-    const LINK_DIST = 155;
-    const nodes = Array.from({ length: 55 }, function () { return new Node(); });
-
-    function drawLinks() {
-      for (var i = 0; i < nodes.length; i++) {
-        for (var j = i + 1; j < nodes.length; j++) {
-          var dx   = nodes[i].x - nodes[j].x;
-          var dy   = nodes[i].y - nodes[j].y;
-          var dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < LINK_DIST) {
-            var alpha = (1 - dist / LINK_DIST) * 0.28;
-            ctx.strokeStyle = 'rgba(0,80,157,' + alpha + ')';
-            ctx.lineWidth   = 0.9;
-            ctx.beginPath();
-            ctx.moveTo(nodes[i].x, nodes[i].y);
-            ctx.lineTo(nodes[j].x, nodes[j].y);
-            ctx.stroke();
-          }
-        }
-      }
-    }
-
-    function loop() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      drawLinks();
-      nodes.forEach(function (n) { n.update(); n.draw(); });
-      requestAnimationFrame(loop);
-    }
-    loop();
-  })();
-  </script>
-
-  <div class="footer-band">
-    <footer>
-      <p>© 2026 Tomás Contreras Delporte.</p>
-    </footer>
-  </div>
+    </section>
+    <section class="story-section container" id="mi-historia" aria-labelledby="story-title">
+      <div class="section-intro">
+        <p class="eyebrow">Mi historia</p>
+        <h2 id="story-title">Primero lo vi.<br>Después me tocó <em>resolverlo.</em></h2>
+        <p>Esta idea nació de trabajar con información, de cerca y desde dentro.</p>
+      </div>
+      <div class="story-chapter">
+        <div class="chapter-label"><span>01</span><p>El problema<br>que descubrí</p></div>
+        <div class="chapter-copy">
+          <h3>Profesionales excelentes. Demasiado tiempo preparando el trabajo.</h3>
+          <p>Vi a personas con experiencia y criterio dedicar una parte importante de su tiempo a recolectar datos, procesarlos a mano y buscar información repartida entre archivos y fuentes distintas.</p>
+          <p>Antes de poder analizar, había que preparar. Antes de poder responder una pregunta, había que reconstruir la información. El conocimiento estaba ahí; llegar a él requería cada vez más esfuerzo.</p>
+          <p class="pull-line">La capacidad del equipo era mucho mayor que la que sus procesos le permitían aprovechar.</p>
+        </div>
+      </div>
+      <div class="story-chapter">
+        <div class="chapter-label"><span>02</span><p>Aprender.<br>Entrar a la industria.</p></div>
+        <div class="chapter-copy">
+          <h3>De los modelos a los problemas reales.</h3>
+          <p>Mi Magíster en Data Science en la Universidad Adolfo Ibáñez me dio herramientas para trabajar con datos y construir modelos. En mi tesis, las apliqué a un problema de la industria minera: estimar concentraciones de metales en relaves usando imágenes satelitales.</p>
+          <p>En Plusmining, una consultora intensiva en información, el valor del trabajo dependía de reunir fuentes, entenderlas y convertirlas en análisis útiles para tomar decisiones.</p>
+          <p>Fue en ese contexto donde me enfrenté al problema desde dentro: el equipo tenía conocimiento y ambición, pero la forma de mover la información empezaba a limitar lo que podíamos entregar.</p>
+        </div>
+      </div>
+      <div class="story-chapter">
+        <div class="chapter-label"><span>03</span><p>Lo que empezamos<br>a construir</p></div>
+        <div class="chapter-copy">
+          <h3>Una base para que el conocimiento pudiera circular.</h3>
+          <p>Empezamos a automatizar la recolección y el procesamiento de datos, integrar nuevas fuentes y centralizar información que antes estaba dispersa.</p>
+          <p>Construí pipelines y herramientas internas para que esos flujos pudieran repetirse, y trabajé con IA para apoyar la elaboración y revisión de reportes. Cada pieza respondía a una necesidad concreta del equipo.</p>
+          <p>El objetivo era que la información estuviera disponible a tiempo y que los profesionales pudieran dedicar más atención al análisis, al criterio y a las preguntas de sus clientes.</p>
+          <ul class="build-list" aria-label="Áreas de trabajo">
+            <li>Automatización</li><li>Nuevas fuentes</li><li>Información centralizada</li><li>Datos e IA</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="result-section" aria-labelledby="result-title">
+      <div class="container result-layout">
+        <div class="result-number">
+          <p class="eyebrow">El resultado</p>
+          <p class="metric">+50<span>HH / mes</span></p>
+          <p class="metric-caption">Más de 50 horas de trabajo manual liberadas al mes.</p>
+        </div>
+        <div class="result-copy">
+          <h2 id="result-title">Más tiempo.<br><em>Más capacidad.</em></h2>
+          <p>Las horas fueron una forma de medir el cambio. Lo más valioso fue ampliar la capacidad del equipo para analizar, entregar y aprovechar el conocimiento que ya tenía.</p>
+          <p>Con una mejor base de información, había más espacio para hacer preguntas, profundizar en los análisis y construir sobre el trabajo anterior.</p>
+        </div>
+      </div>
+    </section>
+    <section class="realization-section container" aria-labelledby="realization-title">
+      <p class="eyebrow">Lo que entendí</p>
+      <h2 id="realization-title">La forma de trabajar puede convertirse en <em>el techo de una empresa.</em></h2>
+      <div class="realization-copy">
+        <p>Automatizar un proceso ayuda. Pero el cambio más profundo ocurre cuando una empresa puede crecer sin que cada nuevo cliente, cada nueva fuente y cada nueva pregunta multipliquen el trabajo manual.</p>
+        <p>Entendí que construir con datos y tecnología también significa cuidar la capacidad de una organización para seguir avanzando.</p>
+      </div>
+    </section>
+    <section class="why-section" aria-labelledby="why-title">
+      <div class="container why-layout">
+        <div class="why-label"><p class="eyebrow">Mi porqué</p><span class="why-mark" aria-hidden="true">↗</span></div>
+        <div>
+          <h2 id="why-title">Que lo que alguien construyó durante años siga <em>teniendo futuro.</em></h2>
+          <p>Detrás de una empresa hay decisiones difíciles, años de trabajo y personas que han apostado por ella. Me mueve ayudar a que todo eso pueda seguir creciendo y adaptándose.</p>
+          <p>Quiero conectar ese esfuerzo y ese conocimiento con herramientas que permitan abrir nuevas posibilidades.</p>
+        </div>
+      </div>
+    </section>
+    <section class="today-section container" aria-labelledby="today-title">
+      <p class="eyebrow">Hoy</p>
+      <div class="today-layout">
+        <h2 id="today-title">Sigo aprendiendo.<br>Sigo <em>construyendo.</em></h2>
+        <div>
+          <p>Actualmente trabajo como <strong>Data Analyst en BHP</strong>, y sigo profundizando en datos, tecnología e IA.</p>
+          <p>Me interesa entender cómo estas capacidades se convierten en soluciones útiles: herramientas que las personas puedan usar, mantener y hacer crecer.</p>
+          <a class="text-link" href="https://www.linkedin.com/in/tomas-contreras-delporte/" target="_blank" rel="noopener noreferrer">Mi recorrido en LinkedIn <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+    <section class="help-section" id="como-puedo-ayudar" aria-labelledby="help-title">
+      <div class="container">
+        <div class="help-intro">
+          <div><p class="eyebrow">Cómo puedo ayudar</p><h2 id="help-title">Del problema a una solución<br>que tu equipo <em>haga suya.</em></h2></div>
+          <p>Si la información dispersa y los procesos manuales están frenando a tu equipo, podemos empezar por entender dónde está el límite.</p>
+        </div>
+        <ol class="help-steps">
+          <li>
+            <div class="step-top"><span class="step-number">01</span><svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></div>
+            <h3>Entender</h3>
+            <p>Conocer cómo trabaja tu empresa, qué información necesita y dónde se concentra el esfuerzo. Elegir un problema concreto y definir qué resultado tendría valor.</p>
+            <p class="step-outcome">Una prioridad clara.</p>
+          </li>
+          <li>
+            <div class="step-top"><span class="step-number">02</span><svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></div>
+            <h3>Construir</h3>
+            <p>Conectar fuentes, automatizar flujos y desarrollar herramientas de datos o IA según lo que el problema requiera. Validarlas con quienes las van a usar.</p>
+            <p class="step-outcome">Una solución útil.</p>
+          </li>
+          <li>
+            <div class="step-top"><span class="step-number">03</span><svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></div>
+            <h3>Transferir</h3>
+            <p>Documentar, explicar y acompañar la adopción para que tu equipo entienda la solución y tenga una base para mantenerla y seguir desarrollándola.</p>
+            <p class="step-outcome">Capacidad que queda en tu equipo.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="contact-section container" id="contacto" aria-labelledby="contact-title">
+      <p class="eyebrow">Todo empieza con una conversación</p>
+      <h2 id="contact-title">¿Hay algo que tu equipo<br>podría hacer <em>mejor?</em></h2>
+      <p>Cuéntame qué están construyendo, qué les está costando y qué les gustaría poder hacer. Podemos explorar por dónde empezar.</p>
+      <div class="contact-actions">
+        <a class="button" href="mailto:tomascontrerasipd@gmail.com?subject=Conversemos%20sobre%20mi%20empresa">Conversemos <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
+        <a class="text-link" href="https://www.linkedin.com/in/tomas-contreras-delporte/" target="_blank" rel="noopener noreferrer">También en LinkedIn <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
+      </div>
+      <a class="contact-email" href="mailto:tomascontrerasipd@gmail.com">tomascontrerasipd@gmail.com</a>
+    </section>
+  </main>
+  <footer class="site-footer container">
+    <a class="brand" href="#inicio">Tomás Contreras<span class="brand-dot" aria-hidden="true">.</span></a>
+    <p>Datos, curiosidad y espacio para la vida.</p>
+    <span>© <span id="year">2026</span></span>
+  </footer>
 </body>
 </html>
