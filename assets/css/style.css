@@ -178,3 +178,14 @@ h3 { font-size: 21px; line-height: 1.4; letter-spacing: -.02em; }
   .reveal { opacity: 1; transform: none; }
   .method-trace.reveal path { stroke-dashoffset: 0; }
 }
+#como-lo-resolvi li::marker {
+  content: "↗";
+  color: #22c55e;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#como-lo-resolvi li {
+  padding-left: 0.4rem;
+  margin-bottom: 0.8rem;
+}
