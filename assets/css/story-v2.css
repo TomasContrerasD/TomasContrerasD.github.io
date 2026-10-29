@@ -1,0 +1,341 @@
+/* Visual storytelling for version 2. Loaded only by its HTML document. */
+.v2-page {
+  --story-paper: #fbfcfd;
+  --story-warm: #ab721a;
+  background: var(--story-paper);
+}
+
+.v2-page .site-header { background: rgba(251, 252, 253, .97); }
+.v2-page .hero-section { border-bottom: 1px solid var(--line); }
+.v2-page .hero { padding-block: 54px 58px; }
+.story-v2 {
+  width: min(1060px, calc(100% - 96px));
+  padding-block: 88px 72px;
+}
+.story-v2 .story-part {
+  display: grid;
+  grid-template-columns: 164px minmax(0, 1fr);
+  column-gap: 48px;
+  align-items: start;
+  scroll-margin-top: 28px;
+}
+.story-v2 .story-part + .story-part { margin-top: 88px; }
+.story-v2 .chapter-content { min-width: 0; max-width: 700px; }
+.story-v2 p, .story-v2 li {
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--body);
+}
+.story-v2 p { margin-bottom: 20px; }
+.story-v2 h2 {
+  font-size: clamp(29px, 3.1vw, 39px);
+  line-height: 1.24;
+  letter-spacing: -.045em;
+  margin-bottom: 26px;
+  max-width: 690px;
+}
+.story-v2 .chapter-content > :last-child { margin-bottom: 0; }
+.story-v2 .chapter-rail { padding-top: 5px; }
+.story-v2 .chapter-number {
+  display: block;
+  width: fit-content;
+  padding-bottom: 12px;
+  margin-bottom: 17px;
+  border-bottom: 2px solid var(--line);
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -.06em;
+  font-weight: 500;
+  color: #87a9bf;
+  font-variant-numeric: tabular-nums;
+}
+.story-v2 .chapter-label, .story-v2 .section-kicker {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.story-v2 .chapter-note {
+  font-family: var(--hand);
+  font-size: 20px;
+  line-height: 1.5;
+  color: #537890;
+  max-width: 156px;
+  margin-bottom: 0;
+}
+.story-v2 .story-highlight { color: inherit; box-shadow: none; }
+
+/* The opening question establishes the tension before the case study. */
+.story-v2 #el-problema h2 { max-width: none; margin-bottom: 32px; }
+.pain-headline {
+  display: block;
+  font-size: clamp(40px, 4.5vw, 57px);
+  line-height: 1.12;
+  letter-spacing: -.055em;
+  max-width: 690px;
+}
+.marked-word {
+  background: linear-gradient(transparent 77%, #fae79b 77%, #fae79b 95%, transparent 95%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.pain-question {
+  display: block;
+  margin-top: 24px;
+  font-size: clamp(23px, 2.4vw, 29px);
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: -.025em;
+  color: var(--body);
+}
+.chapter-pain .chapter-number { border-color: var(--yellow); color: var(--story-warm); }
+
+/* Recognizable symptoms, with a short visual pause between each one. */
+.chapter-symptoms { padding-top: 40px; border-top: 1px solid var(--line); }
+.chapter-symptoms .chapter-number { border-color: #dfbf79; color: var(--story-warm); }
+.story-v2 .signal-list { list-style: none; padding: 0; margin: 30px 0; }
+.story-v2 .signal-list li {
+  position: relative;
+  padding: 20px 20px 20px 36px;
+  margin: 0;
+  border-top: 1px solid #e5dcca;
+  background: linear-gradient(90deg, #fbf5e9, transparent 90%);
+}
+.story-v2 .signal-list li:last-child { border-bottom: 1px solid #e5dcca; }
+.signal-list li::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 30px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--story-warm);
+}
+.signal-list strong, .signal-list span { display: block; }
+.signal-list strong { font-size: 18px; line-height: 1.5; margin-bottom: 2px; }
+.signal-list span { font-size: 15px; line-height: 1.7; }
+
+/* A cooler chapter signals the move from friction to practical action. */
+.story-v2 .chapter-solution {
+  padding: 46px 36px;
+  margin-inline: -36px;
+  background: #eaf4fa;
+  border: 1px solid #d2e6f2;
+  border-radius: 6px 24px 24px 6px;
+}
+.chapter-solution .chapter-number { color: var(--blue); border-color: #9bc9e3; }
+.chapter-solution .section-kicker { color: #286a93; }
+.chapter-solution .story-highlight {
+  display: block;
+  border-left: 3px solid var(--blue);
+  padding-left: 20px;
+  font-weight: 650;
+  color: var(--ink);
+}
+.story-v2 .solution-subtitle {
+  margin: 36px 0 12px;
+  font-size: 24px;
+  letter-spacing: -.035em;
+}
+.story-v2 .solution-list {
+  counter-reset: solution;
+  list-style: none;
+  padding: 0;
+  margin: 26px 0 0;
+}
+.story-v2 #como-lo-resolvi .solution-list li {
+  counter-increment: solution;
+  position: relative;
+  padding: 0 0 24px 48px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+}
+.solution-list li::before {
+  content: counter(solution, decimal-leading-zero);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 29px;
+  height: 29px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #91bad2;
+  border-radius: 50%;
+  background: #eaf4fa;
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 750;
+  z-index: 1;
+}
+.solution-list li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 29px;
+  bottom: 0;
+  left: 14px;
+  border-left: 1px solid #aacddd;
+}
+.story-v2 #como-lo-resolvi .solution-list li:last-child { padding-bottom: 0; }
+.story-v2 #como-lo-resolvi .solution-list li::marker { content: ''; }
+
+/* One measured result carries the strongest contrast in the narrative. */
+.story-v2 .chapter-result {
+  margin-top: 28px;
+  margin-inline: -36px;
+  padding: 46px 36px;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 6px 24px 24px 6px;
+}
+.chapter-result .chapter-number { color: #9fcde8; border-color: #527a9c; }
+.story-v2 .chapter-result .chapter-label { color: #d7eafa; }
+.story-v2 .chapter-result .chapter-note { color: #b5d0e3; }
+.chapter-result h2 { color: #fff; }
+.story-v2 .chapter-result p { color: #d1e3ef; }
+.story-v2 .result-metric {
+  padding: 26px 0 30px;
+  margin-bottom: 28px;
+  border-block: 1px solid #466985;
+}
+.result-metric > span { display: block; }
+.result-metric .metric-intro { font-size: 14px; line-height: 1.7; }
+.result-metric .metric-number {
+  margin: 12px 0 5px;
+  color: #fae79b;
+  font-size: clamp(30px, 3.5vw, 42px);
+  letter-spacing: -.04em;
+  line-height: 1.1;
+}
+.result-metric .metric-number strong {
+  display: inline-block;
+  color: #fae79b;
+  font-size: clamp(88px, 10vw, 128px);
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: -.07em;
+  vertical-align: baseline;
+}
+.result-metric .metric-unit {
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 600;
+  line-height: 1.5;
+  color: #fff;
+}
+.result-metric .metric-outcome { margin-top: 14px; font-size: 15px; }
+
+/* Quieter reflections leave the four main story beats in the foreground. */
+.story-v2 .chapter-reflection + .chapter-reflection { margin-top: 42px; }
+.story-v2 .chapter-reflection h2 {
+  font-size: clamp(24px, 2.6vw, 30px);
+  line-height: 1.4;
+  margin-bottom: 18px;
+}
+.chapter-reflection .chapter-rail:empty { visibility: hidden; }
+.story-v2 .personal-note {
+  font-family: var(--hand);
+  font-size: 24px;
+  line-height: 1.65;
+  padding: 8px 0 8px 22px;
+  margin-block: 26px;
+  border-left: 3px solid var(--yellow);
+  color: var(--ink);
+}
+.story-v2 .chapter-help { padding-top: 42px; border-top: 1px solid var(--line); }
+.story-v2 .help-principle {
+  margin-block: 28px;
+  font-size: 21px;
+  line-height: 1.6;
+  font-weight: 650;
+  letter-spacing: -.025em;
+  color: var(--ink);
+}
+.story-v2 .story-method { margin-top: 28px; }
+.story-v2 .story-method > li {
+  border-top: 1px solid var(--line);
+  border-bottom: 0;
+  padding: 26px 0 26px 58px;
+}
+.story-v2 .story-method > li::before { top: 26px; color: var(--blue); }
+.story-v2 .story-method h3 { font-size: 22px; }
+.story-v2 .story-method p { font-size: 16px; }
+.story-v2 .story-method > li:last-child { padding-bottom: 0; }
+.story-v2 .chapter-contact {
+  margin-top: 64px;
+  padding: 40px 36px;
+  margin-inline: -36px;
+  background: #edf4f8;
+  border-top: 3px solid var(--yellow);
+  border-radius: 0 0 16px 16px;
+}
+.chapter-contact h2 { font-size: clamp(36px, 4vw, 48px); }
+.v2-contact-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; margin-top: 28px; }
+.v2-contact-actions .button { flex-shrink: 0; }
+.story-v2 .v2-contact-actions .story-email { margin: 0; font-family: var(--sans); font-size: 13px; min-width: 0; }
+
+@media (max-width: 1050px) {
+  .story-v2 { width: calc(100% - 64px); }
+  .story-v2 .story-part { grid-template-columns: 134px minmax(0, 1fr); column-gap: 32px; }
+  .story-v2 .chapter-solution, .story-v2 .chapter-result, .story-v2 .chapter-contact { margin-inline: -12px; padding-inline: 12px; }
+}
+@media (max-width: 760px) {
+  .v2-page .hero { padding-block: 34px 40px; }
+  .story-v2 { width: calc(100% - 40px); padding-block: 48px; }
+  .story-v2 .story-part { grid-template-columns: minmax(0, 1fr); row-gap: 22px; scroll-margin-top: 20px; }
+  .story-v2 .story-part + .story-part { margin-top: 54px; }
+  .story-v2 .chapter-rail { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding-top: 0; }
+  .story-v2 .chapter-number { font-size: 22px; padding: 0 12px 0 0; margin: 0; border-bottom: 0; border-right: 2px solid var(--line); }
+  .story-v2 .chapter-label { margin: 0; font-size: 10px; }
+  .story-v2 .chapter-note { width: 100%; max-width: none; font-size: 19px; margin: 0; }
+  .story-v2 h2 { font-size: 29px; margin-bottom: 22px; }
+  .story-v2 p, .story-v2 li { font-size: 16px; line-height: 1.85; }
+  .story-v2 #el-problema h2 { margin-bottom: 26px; }
+  .pain-headline { font-size: clamp(36px, 8vw, 48px); }
+  .pain-question { font-size: 22px; line-height: 1.5; margin-top: 20px; }
+  .chapter-symptoms { padding-top: 26px; }
+  .story-v2 .signal-list { margin-block: 24px; }
+  .signal-list strong { font-size: 17px; }
+  .story-v2 .chapter-solution, .story-v2 .chapter-result, .story-v2 .chapter-contact {
+    margin-inline: 0;
+    padding: 28px 20px;
+    border-radius: 5px 18px 18px 5px;
+  }
+  .chapter-solution .chapter-number { border-color: #9bc9e3; }
+  .story-v2 .chapter-solution .chapter-note, .story-v2 .chapter-result .chapter-note { font-size: 18px; }
+  .story-v2 .chapter-solution .section-kicker { font-size: 10px; }
+  .chapter-solution .story-highlight { padding-left: 15px; }
+  .story-v2 .solution-subtitle { font-size: 22px; }
+  .story-v2 #como-lo-resolvi .solution-list li { padding-left: 42px; font-size: 15px; }
+  .story-v2 .chapter-result { margin-top: 20px; }
+  .chapter-result .chapter-number { border-color: #527a9c; }
+  .result-metric .metric-number { font-size: 30px; }
+  .result-metric .metric-number strong { font-size: clamp(78px, 18vw, 110px); }
+  .result-metric .metric-unit { font-size: 19px; }
+  .story-v2 .chapter-reflection + .chapter-reflection { margin-top: 34px; }
+  .story-v2 .chapter-reflection h2 { font-size: 25px; }
+  .chapter-reflection .chapter-rail:empty { display: none; }
+  .story-v2 .personal-note { font-size: 23px; padding-left: 18px; }
+  .story-v2 .chapter-help { padding-top: 28px; }
+  .story-v2 .help-principle { font-size: 20px; }
+  .story-v2 .story-method > li { padding-left: 43px; }
+  .story-v2 .story-method h3 { font-size: 21px; }
+  .story-v2 .story-method p { font-size: 15px; }
+  .story-v2 .chapter-contact { margin-top: 48px; }
+  .chapter-contact h2 { font-size: 36px; }
+  .v2-contact-actions { gap: 18px; }
+  .story-v2 .v2-contact-actions .story-email { font-size: 12px; }
+}
+
+@media print {
+  .v2-page .site-header { position: static; }
+  .v2-page #hero-canvas { display: none; }
+  .story-v2 .chapter-solution, .story-v2 .chapter-result, .story-v2 .chapter-contact { background: transparent; color: #123a62; border: 1px solid #c3dff0; }
+  .story-v2 .chapter-result h2, .story-v2 .chapter-result p, .story-v2 .chapter-result span, .story-v2 .chapter-result strong { color: #123a62; }
+  .v2-page .reveal { opacity: 1; transform: none; }
+}
