@@ -7,6 +7,7 @@ Sitio personal en español con una presentación inicial y un relato dividido po
 - `index.html`: presentación personal y storytelling dividido en nueve secciones, con metodología y contacto.
 - `assets/css/style.css`: diseño adaptable a escritorio y móvil; contempla movimiento reducido.
 - `assets/js/main.js`: año del pie de página y aparición gradual del contenido al avanzar. El contenido, la navegación y el contacto funcionan sin JavaScript.
+- `assets/js/contact-form.js`: valida el formulario de contacto y prepara un correo con los datos completados, sin enviarlo automáticamente.
 - `assets/js/hero-network.js`: fondo de nodos y conexiones en la presentación, con reacción al cursor. La animación se pausa fuera de pantalla y respeta la preferencia de movimiento reducido.
 - `assets/fonts/`: fuentes locales Manrope y Kalam con sus licencias abiertas.
 - `assets/img/1.jpg`: fotografía original.
@@ -26,7 +27,9 @@ Abrir `http://127.0.0.1:8000`. También es posible abrir `index.html` directamen
 
 ## Contenido y contacto
 
-El relato usa una columna de lectura continua, títulos discretos y listas. El diseño combina azul y celeste, pequeños acentos amarillos y sombras suaves. Manrope se utiliza para la presentación, los títulos, la metodología y el contacto; Kalam aporta una letra manuscrita legible a la narración. Ambas fuentes se sirven localmente y sus licencias están en `assets/fonts/`. El texto se edita directamente en `index.html`. El header contiene el nombre y un botón que apunta a `#contacto`. El botón «Conversemos» y el correo del cierre abren el cliente de correo.
+El relato usa una columna de lectura continua, títulos discretos y listas. El diseño combina azul y celeste, pequeños acentos amarillos y sombras suaves. Manrope se utiliza para la presentación, los títulos, la metodología y el contacto; Kalam aporta una letra manuscrita legible a la narración. Ambas fuentes se sirven localmente y sus licencias están en `assets/fonts/`. El texto se edita directamente en `index.html`. El header contiene el nombre y un botón que apunta a `#contacto`. El botón «Correo» y el correo del cierre abren el cliente de correo.
+
+El formulario pide nombre, empresa, industria, email, cómo conocieron a Tomás y una descripción del proyecto. Nombre, email y mensaje son obligatorios. «Preparar correo» abre la aplicación de correo del visitante con los datos completados; el visitante debe revisar y enviar el mensaje. El sitio no recibe ni almacena solicitudes en un servidor. Para recibirlas directamente desde la web se necesita conectar un servicio de formularios o un backend. Se mantienen los enlaces directos a correo y LinkedIn.
 
 La metodología contempla entender el negocio, construir soluciones y transferirlas al equipo o continuar acompañándolo según sus necesidades.
 
