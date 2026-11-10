@@ -47,6 +47,8 @@ h3 { font-size: 21px; line-height: 1.4; letter-spacing: -.02em; }
 .brand { font-size: 18px; font-weight: 750; letter-spacing: -.045em; text-decoration: none; }
 .brand-dot { color: var(--blue); }
 .nav-links { display: flex; align-items: center; gap: 22px; flex-shrink: 0; }
+.nav-page { font-size: 13px; font-weight: 650; text-decoration: none; text-underline-offset: 5px; }
+.nav-page:hover, .nav-page:focus-visible { color: var(--blue); text-decoration: underline; }
 .nav-cv { display: flex; align-items: center; gap: 6px; }
 .nav-cv-label { font-size: 12px; font-weight: 650; margin-right: 2px; }
 .cv-link { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 7px; transition: background .25s ease, transform .25s ease; }
@@ -68,6 +70,21 @@ h3 { font-size: 21px; line-height: 1.4; letter-spacing: -.02em; }
 .home-page .bhp-name, .home-page .story-orange { color: #bc4c00; }
 .hero-copy > p:not(.hero-lead) { font-size: 16px; line-height: 1.8; max-width: 540px; }
 .hero-copy > p:last-child { margin-bottom: 0; }
+/* The landing page centers a greeting above two clear paths. */
+.landing-page { min-height: 100svh; display: flex; flex-direction: column; }
+.landing-page main { flex: 1; display: flex; }
+.landing-page .hero-section { width: 100%; display: flex; align-items: center; }
+.landing-page .hero { grid-template-columns: minmax(0, 1fr); justify-items: center; gap: 0; padding-block: 48px; text-align: center; }
+.landing-page .hero-copy { width: min(100%, 700px); max-width: none; }
+.landing-page .hero h1 { font-size: clamp(32px, 4.5vw, 52px); line-height: 1.2; margin-bottom: 32px; }
+.path-options { display: grid; gap: 12px; width: 100%; max-width: 480px; margin-inline: auto; }
+.path-button { width: 100%; justify-content: space-between; padding: 18px 22px; text-align: left; }
+.path-copy { display: grid; gap: 4px; min-width: 0; }
+.path-title { font-size: 17px; line-height: 1.4; }
+.path-description { font-size: 13px; line-height: 1.5; font-weight: 400; }
+.path-button .icon { flex-shrink: 0; }
+.path-button-secondary { background: transparent; color: var(--ink); border-color: #91bad2; box-shadow: 0 4px 12px rgba(18, 58, 98, .06); }
+.path-button-secondary:hover, .path-button-secondary:focus-visible { background: #d9edf9; }
 .hero-visual { width: 100%; max-width: 330px; justify-self: center; }
 .portrait-frame { background: #d8eaf5; border: 1px solid rgba(22, 120, 181, .16); border-radius: 22px; box-shadow: 0 18px 40px rgba(31, 111, 172, .2), 0 4px 12px rgba(31, 111, 172, .1); overflow: hidden; aspect-ratio: 4 / 5; transition: box-shadow .4s ease; }
 .portrait-frame:hover { box-shadow: 0 22px 48px rgba(31, 111, 172, .26), 0 4px 12px rgba(31, 111, 172, .12); }
@@ -159,6 +176,10 @@ h3 { font-size: 21px; line-height: 1.4; letter-spacing: -.02em; }
   .hero { gap: 42px; }
 }
 @media (max-width: 900px) {
+  html:has(.business-page), html:has(.mentoring-page) { scroll-padding-top: 128px; }
+  .business-page .navigation, .mentoring-page .navigation { flex-wrap: wrap; padding-block: 13px; gap: 10px; }
+  .business-page .navigation .brand, .mentoring-page .navigation .brand { width: 100%; max-width: none; }
+  .business-page .nav-links, .mentoring-page .nav-links { width: 100%; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
   .today-section { grid-template-columns: 1fr; gap: 26px; }
   .today-photo { width: min(300px, 100%); justify-self: center; }
   .method-flow { padding-left: 36px; }
@@ -171,6 +192,8 @@ h3 { font-size: 21px; line-height: 1.4; letter-spacing: -.02em; }
   .brand { font-size: 16px; line-height: 1.4; max-width: 210px; }
   .nav-contact { padding: 9px 12px; gap: 9px; }
   .hero { grid-template-columns: 1fr; gap: 30px; padding-block: 34px 40px; }
+  .landing-page .hero { padding-block: 34px 40px; }
+  .path-button { padding: 16px 18px; }
   .hero h1 { font-size: clamp(52px, 10vw, 68px); margin-bottom: 20px; }
   .hero-lead { font-size: 18px; }
   .hero-copy > p:not(.hero-lead) { font-size: 15px; }
@@ -198,6 +221,8 @@ h3 { font-size: 21px; line-height: 1.4; letter-spacing: -.02em; }
 }
 @media (max-width: 540px) {
   html { scroll-padding-top: 128px; }
+  html:has(.business-page), html:has(.mentoring-page) { scroll-padding-top: 160px; }
+  .business-page .nav-links, .mentoring-page .nav-links { display: grid; grid-template-columns: 1fr auto; }
   .navigation { flex-wrap: wrap; padding-block: 13px; gap: 9px; }
   .navigation .brand { width: 100%; max-width: none; }
   .nav-links { width: 100%; justify-content: space-between; gap: 16px; }
